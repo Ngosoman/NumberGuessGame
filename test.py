@@ -25,3 +25,10 @@ def play_game():
     secret_number = random.randint(1, 100)
     attempts = 0
     wrong_guesses = 0
+
+     while attempts < guesses_allowed:
+        try:
+            guess = int(input(f"Guess a number between 1 and 100 (Remaining: {guesses_allowed - attempts}): "))
+        except ValueError:
+            print("Invalid input. Please enter a number.")
+            continue
