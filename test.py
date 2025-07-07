@@ -28,7 +28,7 @@ def play_game():
     attempts = 0
     wrong_guesses = 0
 
-while attempts < guesses_allowed:
+    while attempts < guesses_allowed:
         try:
             guess = int(input(f"Guess a number between 1 and 100 (Remaining: {guesses_allowed - attempts}): "))
         except ValueError:
@@ -53,7 +53,7 @@ while attempts < guesses_allowed:
             else:
                 print("Hint: The number is odd.")
 
-else:
+    else:
         print(f"Game Over! The correct number was {secret_number}")
 
 def save_score(score):
