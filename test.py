@@ -43,3 +43,5 @@ while attempts < guesses_allowed:
             print("Too Low! ")
         else:
             print("Too High! ")
+
+        wrong_guesses += 1
