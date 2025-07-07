@@ -45,3 +45,13 @@ while attempts < guesses_allowed:
             print("Too High! ")
 
         wrong_guesses += 1
+        
+         # Optional Hint after 3 wrong tries
+        if wrong_guesses == 3:
+            if secret_number % 2 == 0:
+                print(" Hint: The number is even.")
+            else:
+                print("Hint: The number is odd.")
+
+else:
+        print(f"Game Over! The correct number was {secret_number}")
