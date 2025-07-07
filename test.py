@@ -71,3 +71,9 @@ def show_leaderboard():
                 print(line.strip())
     except FileNotFoundError:
         print("No scores yet. Be the first to play!")
+
+play_game()
+
+view = input("\nWould you like to view the leaderboard? (yes/no): ").lower()
+if view == "yes":
+    show_leaderboard()
