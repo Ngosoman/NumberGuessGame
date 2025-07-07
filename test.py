@@ -17,3 +17,11 @@ def get_difficulty():
             return 5
         else:
             print("Invalid choice. Please choose 1, 2, or 3.")
+
+
+
+def play_game():
+    guesses_allowed = get_difficulty()
+    secret_number = random.randint(1, 100)
+    attempts = 0
+    wrong_guesses = 0
