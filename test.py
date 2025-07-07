@@ -17,7 +17,9 @@ def get_difficulty():
             return 5
         else:
             print("Invalid choice. Please choose 1, 2, or 3.")
+        continue
 
+        attempts += 1
 
 
 def play_game():
@@ -32,3 +34,12 @@ while attempts < guesses_allowed:
         except ValueError:
             print("Invalid input. Please enter a number.")
             continue
+
+        if guess == secret_number:
+            print(f" Congratulations! You guessed it in {attempts} attempts!")
+            save_score(attempts)
+            break
+        elif guess < secret_number:
+            print("Too Low! ")
+        else:
+            print("Too High! ")
