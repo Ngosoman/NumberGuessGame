@@ -55,3 +55,19 @@ while attempts < guesses_allowed:
 
 else:
         print(f"Game Over! The correct number was {secret_number}")
+
+def save_score(score):
+    name = input("Enter your name to save your score: ")
+    with open("highscores.txt", "a") as file:
+        file.write(f"{name}: {score} attempts\n")
+    print("Score saved!")
+
+def show_leaderboard():
+    print("\n Leaderboard:")
+    try:
+        with open("highscores.txt", "r") as file:
+            scores = file.readlines()
+            for line in scores:
+                print(line.strip())
+    except FileNotFoundError:
+        print("No scores yet. Be the first to play!")
