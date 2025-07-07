@@ -26,7 +26,7 @@ def play_game():
     attempts = 0
     wrong_guesses = 0
 
-     while attempts < guesses_allowed:
+while attempts < guesses_allowed:
         try:
             guess = int(input(f"Guess a number between 1 and 100 (Remaining: {guesses_allowed - attempts}): "))
         except ValueError:
