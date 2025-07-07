@@ -6,3 +6,14 @@ def get_difficulty():
     print("1. Easy (10 guesses)")
     print("2. Medium (7 guesses)")
     print("3. Hard (5 guesses)")
+      
+    while True:
+        choice = input("Enter 1, 2 or 3: ")
+        if choice == "1":
+            return 10
+        elif choice == "2":
+            return 7
+        elif choice == "3":
+            return 5
+        else:
+            print("Invalid choice. Please choose 1, 2, or 3.")
